@@ -2766,7 +2766,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {
@@ -3064,7 +3064,7 @@ span.m_1 {
 }
 
 
-.pricingTable-sign-up a{}
+/* .pricingTable-sign-up a{} */
 .pricingTable-sign-up a{
 	position: relative;
 	font-size: 18px;
@@ -3129,9 +3129,7 @@ span.m_1 {
 	color: #121212;
 }
 
-.customer-box{
-	
-}
+
 .customer-box .nav-tabs{
 	border-bottom: none;
 	padding: 20px;
@@ -3681,7 +3679,7 @@ a.link-style3 {
 	border: none;
 	border-bottom: 1px solid #efefef;
 }
-.post-btn{}
+/* .post-btn{} */
 .post-btn button.hover-btn-new::before, .post-btn button.hover-btn-new::after {
     background: #eea412;
     content: '';
