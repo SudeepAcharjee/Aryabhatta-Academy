@@ -13,7 +13,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="Sudeep Acharjee">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	
     <!-- Site Icons -->
      <link rel="shortcut icon" href="./images/prettyPhoto/favicon.ico" type="image/x-icon">
      <link rel="apple-touch-icon" href="./images/prettyPhoto/apple-touch-icon.png">
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="./css/start.css">
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
@@ -131,7 +133,8 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
-					<img src="images/logo.png" alt="" />
+					<img src="images/logo.png" alt="" 
+                        />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
@@ -537,7 +540,57 @@
 
     <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
         <div class="container">
-            <div class="section-title text-center">
+            <section>
+                <header class="major">
+                    <h2>Rate Us</h2>
+                </header>
+                <div class="s">
+                <div class="container1">
+                    <div class="post">
+                        <div class="text">Thanks for rating us!</div>
+                        <div class="edit">EDIT</div>
+                    </div>
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5">
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1" class="fas fa-star"></label>
+                        <form action="#">
+                    <header></header>
+                    <div class="textarea">
+                        <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+            </section>
+        </section>
+        
+        <script>
+            const btn = document.querySelector("button");
+            const post = document.querySelector(".post");
+            const widget = document.querySelector(".star-widget");
+            const editBtn = document.querySelector(".edit");
+            btn.onclick = ()=>{
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = ()=>{
+                widget.style.display = "block";
+                post.style.display = "none";
+            }
+            return false;
+            }
+        </script>
+    
+
                 <!-- <h3>Testimonials</h3>
                 <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div><!-- end title -
