@@ -3881,3 +3881,15 @@ a.link-style3 {
     min-height: 700px;
 }
 
+.all-title-boxe {
+    background: url(images/exam.jpg)no-repeat;
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+  }
