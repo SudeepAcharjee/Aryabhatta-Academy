@@ -1,7 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!-- Teachers -->
+<style>
+	/* Styling for h1 element */
+h1.touch-animation {
+  position: relative;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #ff00ff; /* Change color as needed */
+  color: #ffffff; /* Change color as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
 
-    <!-- Basic -->
+/* Highlighted text */
+h1.touch-animation span {
+  background-color: yellow; /* Change color as needed */
+}
+
+/* Animation on touch */
+h1.touch-animation:hover {
+  transform: scale(1.1);
+  background-color: #00ff00; /* Change color as needed */
+}
+
+/* Responsive styles for different devices */
+@media (max-width: 767px) {
+  h1.touch-animation {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.touch-animation {
+    font-size: 18px;
+  }
+}
+
+</style>
+
+
+	  	<!-- end teachers -->
+
+
+		<!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
@@ -170,6 +215,7 @@
 	</div>
 	
 	<div id="teachers" class="section wb">
+		<h1 class="touch-animation">Advisory Body</H1>
         <div class="container">
             <div class="row">
 				<div class="col-lg-3 col-md-6 col-12">
@@ -334,7 +380,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->	
-
+	
     <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
         <div class="container">
             <div class="section-title text-center">
