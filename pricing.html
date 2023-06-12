@@ -1,5 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        /* Styling for h1 element */
+    h1.touch-animation {
+      position: relative;
+      display: flex;
+      padding: 30px 20px;
+      font-size: 24px;
+      background-color: brown; /* Change color as needed */
+      color: #ffffff; /* Change color as needed */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Highlighted text */
+    h1.touch-animation span {
+      background-color:rgba(238, 164, 18,0.9); /* Change color as needed */
+    }
+    
+    /* Animation on touch */
+    h1.touch-animation:hover {
+      transform: scale(1.1);
+      background-color: rgba(238, 164, 18,0.9); /* Change color as needed */
+    }
+    
+    /* Responsive styles for different devices */
+    @media (max-width: 767px) {
+      h1.touch-animation {
+        font-size: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1.touch-animation {
+        font-size: 18px;
+      }
+    }
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    
+    h2.Note {
+      animation: slide-in 3.5s ease-in-out;
+      text-align: center;
+      text-decoration-color: red;
+      color: red;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    </style>
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -169,7 +225,9 @@
 			<h1>Examination<span class="m_1">The teacher In-charge of the examination department is Golok Saha.</span></h1>
 		</div>
 	</div>
-	
+    <h1 class="touch-animation">Examination Cell</H1>
+        <h2 class="Note">*Students are required to appear in the following examinations in an academic year. </h2>
+
 
 
     <footer class="footer">
@@ -180,16 +238,17 @@
                         <div class="widget-title">
                             <h3>About US</h3>
                         </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                        <div class="footer-right">
+                        <p> Aryabhatta Academy is an ideal english medium school was established in the year 2008 at North Barpeta Road and run by "Aryabhatta Trust"</p>
+                            
+                            <div class="footer-right">
 							<ul class="footer-links-soi">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul><!-- end links -->
-						</div>
+						</div>						
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 
@@ -200,10 +259,10 @@
                         </div>
                         <ul class="footer-links">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Pricing</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Admission</a></li>
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Online.AV</a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
@@ -216,9 +275,10 @@
 
                         <ul class="footer-links">
                             <li><a href="mailto:#">info@yoursite.com</a></li>
-                            <li><a href="#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+61 3 8376 6284</li>
+                            <li><a href="#">Online School</li>
+                            <li>North Barpeta Road,Dist. Barpeta, Assam
+                            </li>
+                            <li>+91 7002163394<br>7002868445<br>03666295626</li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
@@ -231,7 +291,7 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-center">                   
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2023 <a href="#">Aryabhatta Academy</a> Design By : <a href="https://sudeep-portfolio.netlify.app">Sudeep Acharjee</a></p>
                 </div>
             </div>
         </div><!-- end container -->
