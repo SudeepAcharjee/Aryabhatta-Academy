@@ -85,6 +85,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/examination.css">
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
@@ -97,82 +98,29 @@
 </head>
 <body class="host_version"> 
 
-	<!-- Modal -->
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header tit-up">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Customer Login</h4>
-			</div>
-			<div class="modal-body customer-box">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs">
-					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
-					<li><a href="#Registration" data-toggle="tab">Registration</a></li>
-				</ul>
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" id="Login">
-						<form role="form" class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email1" placeholder="Name" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10">
-									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
-										Submit
-									</button>
-									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="tab-pane" id="Registration">
-						<form role="form" class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" placeholder="Name" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="password" placeholder="Password" type="password">
-								</div>
-							</div>
-							<div class="row">							
-								<div class="col-sm-10">
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Save &amp; Continue
-									</button>
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Cancel</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	  </div>
-	</div>
+		<!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header tit-up">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Login Panel</h4>
+        </div>
+        <div class="modal-body customer-box">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs">
+            <li><a class="active" href="" data-toggle="tab">Head || Admin</a></li>
+            <li><a href="#Registration" data-toggle="tab">Admin</a></li>
+                      <li><a href="#Registration" data-toggle="tab">Students</a></li>
+          </ul>
+          <!-- Tab panes -->
+          
+        </div>
+      </div>
+      </div>
+    </div>
+  
+  
 
     <!-- LOADER -->
 	<div id="preloader">
@@ -228,13 +176,13 @@
 	</div>
     <h1 class="touch-animation">Examination Cell</H1>
         <h2 class="Note">*Students are required to appear in the following examinations in an academic year. </h2>
-        <h2 class="hover-animation">1.CLass Test</h2>
-        <h2 class="hover-animation">2.Monthly Test</h2>
-        <h2 class="hover-animation">3.1st & 2nd Unit Test</h2>
-        <h2 class="hover-animation">4.Half Yearly</h2>
-        <h2 class="hover-animation">5.3rd & 4th Unit Test</h2>
-        <h2 class="hover-animation">6.Half Yearly</h2>
-        <h2 class="hover-animation">7.Half Yearly</h2>
+        <div class="container">
+            <div class="box-container">
+              <div class="box">Class Test</div>
+              <div class="box">Monthly Test</div>
+              <div class="box">1st & 2nd Unit Test</div>
+            </div>
+          </div>
 
 
     <footer class="footer">
@@ -310,6 +258,20 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+    <script>
+        // JavaScript code to handle click animation
+        document.addEventListener('DOMContentLoaded', function() {
+          const boxes = document.querySelectorAll('.box');
+          boxes.forEach(function(box) {
+            box.addEventListener('click', function() {
+              this.classList.add('clicked');
+              setTimeout(() => {
+                this.classList.remove('clicked');
+              }, 500);
+            });
+          });
+        });
+      </script>
 
 </body>
 </html>
