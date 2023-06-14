@@ -17,7 +17,7 @@ document.getElementById("insert").onclick = function () {
     .set({
       PhNo: rollV,
       Name: nameV,
-      gender: genderV,
+      Email: genderV,
       Pass: addressV,
     });
   alert("Data Inserted");
