@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Gallery||AdminPanel</title>
+        <link rel="shortcut icon" href="../images/prettyPhoto/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        h1 {
+  color: #0077be; /* Ocean blue color */
+  text-align: center; /* Center alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px; /* Adjust height as needed */
+  margin: 0; /* Remove default margin */
+}
+
+    </style>
+    
+    
+    </head>
+
+    <body>
+
+     <div class="container mt-2">
+         <div class="card">
+             <div class="card-body">
+                 <!-- <form id="post-form">
+                     <center><h3>Upload photos to Gallery</h3></center>
+                     <textarea id="post" class="form-control" placeholder="What's on your mind..."></textarea>
+                     <input type="file" class="form-control" id="image" accept="images/*">
+                     <div class="text-center">
+                         <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                     </div>
+
+                 </form> -->
+                 <h1>Welcome to Aryabhatta Gallery page</h1>
+              </div>
+
+         </div>
+         <div class="row mt-4" id="posts">
+
+         </div>
+
+     </div>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCEFz0u9gwKgsjZeHsVL3QCj_yvkJQcC3Q",
+
+authDomain: "admin-gallery-ce26f.firebaseapp.com",
+
+databaseURL: "https://admin-gallery-ce26f-default-rtdb.firebaseio.com",
+
+projectId: "admin-gallery-ce26f",
+
+storageBucket: "admin-gallery-ce26f.appspot.com",
+
+messagingSenderId: "333747816151",
+
+appId: "1:333747816151:web:52e7c625a19a4ee034d292"
+
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="defualt.js"></script>
+    </body>
+</html>
