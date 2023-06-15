@@ -27,53 +27,27 @@
 
      </div>
 
-     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-    
-        const firebaseConfig = {
-          apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
-    
-    authDomain: "head-admin-login.firebaseapp.com",
-    
-    databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
-    
-    projectId: "head-admin-login",
-    
-    storageBucket: "head-admin-login.appspot.com",
-    
-    messagingSenderId: "1009923970267",
-    
-    appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
-        };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth();
-    console.log(app);
-
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-          
-            document.body.style.display = "block";
-        } else {
-            // User is not signed in, redirect to the login page
-            window.location.href = "../index.html";
-        }
-    });
-    </script>
-
-
-
-
-
-
-
 <!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
 
 <script>
   // Your web app's Firebase configuration
-  
+  var firebaseConfig = {
+    apiKey: "AIzaSyCEFz0u9gwKgsjZeHsVL3QCj_yvkJQcC3Q",
+
+authDomain: "admin-gallery-ce26f.firebaseapp.com",
+
+databaseURL: "https://admin-gallery-ce26f-default-rtdb.firebaseio.com",
+
+projectId: "admin-gallery-ce26f",
+
+storageBucket: "admin-gallery-ce26f.appspot.com",
+
+messagingSenderId: "333747816151",
+
+appId: "1:333747816151:web:52e7c625a19a4ee034d292"
+
+  };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();

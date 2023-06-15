@@ -45,12 +45,13 @@ const signIn = () => {
         .then((result) => {
             // Signed in 
             // document.write("You are Signed In" )
-            window.location.assign("./admingallery.html");
+            window.location.assign("./auth.html");
 
             // console.log(result)
         })
         .catch((error) => {
             console.log(error.code);
             console.log(error.message)
+            alert("Error")
         });
 }
