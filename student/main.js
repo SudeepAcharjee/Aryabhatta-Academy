@@ -52,7 +52,6 @@ const signIn = () => {
             // console.log(result)
         })
         .catch((error) => {
-            console.log(error.code);
-            console.log(error.message)
+            alert("Error")
         });
 }
