@@ -87,20 +87,20 @@ appId: "1:465440359250:web:33e32b886c6bb69704f08b"
 
 
   
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth();
-      console.log(app);
+      // const app = initializeApp(firebaseConfig);
+      // const auth = getAuth();
+      // console.log(app);
   
-      onAuthStateChanged(auth, (user) => {
-          if (user) {
+      // onAuthStateChanged(auth, (user) => {
+      //     if (user) {
            
-              console.log(user);
+      //         console.log(user);
               
-          } else {
-              // User is not signed in, redirect to the login page
-              window.location.href = "../index.html";
-          }
-      });
+      //     } else {
+      //         // User is not signed in, redirect to the login page
+      //         window.location.href = "../index.html";
+      //     }
+      // });
   </script>
   </body>
 </html>
