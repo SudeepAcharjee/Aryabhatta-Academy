@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .top-right-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      
+      .top-left-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate||StudentID</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+  </head>
+  <body>
+    
+    <a class="top-left-button" href="#">Home</a>
+    <div class="form">
+      <!-- Email  -->
+      <div class="email">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Write your email"
+        />
+      </div>
+      <!-- passWord -->
+      <div class="pass">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+
+      <!-- Sign Up button -->
+      <button id="submit-btn" onclick="signUp()">Sign Up</button>
+     
+
+    <script src="main.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyBumj6j7jBrkGcj20obWFMvAEVpa1RiT98",
+
+authDomain: "crud-student-87b1c.firebaseapp.com",
+
+databaseURL: "https://crud-student-87b1c-default-rtdb.firebaseio.com",
+
+projectId: "crud-student-87b1c",
+
+storageBucket: "crud-student-87b1c.appspot.com",
+
+messagingSenderId: "465440359250",
+
+appId: "1:465440359250:web:33e32b886c6bb69704f08b"
+
+};
+
+
+  
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth();
+      console.log(app);
+  
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+           
+              console.log(user);
+              
+          } else {
+              // User is not signed in, redirect to the login page
+              window.location.href = "./new.html";
+          }
+      });
+  </script>
+  </body>
+</html>
