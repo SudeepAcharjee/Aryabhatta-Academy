@@ -47,7 +47,7 @@ const signIn = () => {
         .then((result) => {
             // Signed in 
             // document.write("You are Signed In" )
-            window.location.assign("../new.html");
+            window.location.assign("../onlineschool/class.html");
 
             // console.log(result)
         })
