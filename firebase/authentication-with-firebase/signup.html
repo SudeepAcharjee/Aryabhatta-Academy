@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .top-right-button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      
+      .top-left-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+  </head>
+  <body>
+    <a class="top-right-button" href="">OnlineAA</a>
+    <a class="top-left-button" href="../superadmin.html">Home</a>
+    <div class="form">
+      <!-- Email  -->
+      <div class="email">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Write your email"
+        />
+      </div>
+      <!-- passWord -->
+      <div class="pass">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+
+      <!-- Sign Up button -->
+      <button id="submit-btn" onclick="signUp()">Sign Up</button>
+     
+
+    <script src="main.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+  
+      const firebaseConfig = {
+        apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
+  
+  authDomain: "head-admin-login.firebaseapp.com",
+  
+  databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
+  
+  projectId: "head-admin-login",
+  
+  storageBucket: "head-admin-login.appspot.com",
+  
+  messagingSenderId: "1009923970267",
+  
+  appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
+      };
+  
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth();
+      console.log(app);
+  
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+            // alert("Welcome to Super Admin");
+            //   console.log(user);
+              
+          } else {
+              // User is not signed in, redirect to the login page
+              window.location.href = "../login.html";
+          }
+      });
+  </script>
+  </body>
+</html>
