@@ -2,7 +2,50 @@
 <html lang="en">
     <style>
         /* Styling for h1 element */
+        h1.touch-animation {
+      position: relative;
+      display: flex;
+      padding: 30px 20px;
+      font-size: 24px;
+      background-color: brown; /* Change color as needed */
+      color: #ffffff; /* Change color as needed */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      justify-content: center;
+      align-items: center;
+    }
     
+    /* Highlighted text */
+    h1.touch-animation span {
+      background-color:rgba(238, 164, 18,0.9); /* Change color as needed */
+    }
+    
+    /* Animation on touch */
+    h1.touch-animation:hover {
+      transform: scale(1.1);
+      background-color: rgba(238, 164, 18,0.9); /* Change color as needed */
+    }
+    
+    /* Responsive styles for different devices */
+    @media (max-width: 767px) {
+      h1.touch-animation {
+        font-size: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1.touch-animation {
+        font-size: 18px;
+      }
+    }
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
     
     </style>
     <!-- Basic -->
@@ -120,15 +163,15 @@
     <p><span> 2 Pupils are admitted on merit basis after an interview and admission test.</span></p>
     <p><span>3. Birth Certificate is compulsory at the time of Admisssion.</span></p>
 
-    <h1 class="centered-heading">
-        <span>FEES STRUCTURE-</span>
+    <h1 class="touch-animation">
+        FEES STRUCTURE-
     </h1>
     <h2>Admission fee: _______</h2>
     <h2>Session Fee: _______</h2>
     <h2>Monthly Fee: _______</h2>
 
-    <h1 class="centered-heading">
-        <span>UNIFORMS-</span>
+    <h1 class="touch-animation">
+        UNIFORMS-
     </h1>
     <h3>Monday, Tuesday, Thursday, Friday</h3>
     <p><span>Boys: Dark blue trousers/half pant/sky blue shirt, tie, belt, badge, black shoe, blue socks with red stripes.</span></p>   
@@ -137,16 +180,16 @@
     <p><span>Boys: White trousers/half pant, t-shirt colour housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white scoks whith blue stripes.</span></p> 
     <p><span>Girls: White Skirts, t-shirt colour housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white scoks whith blue stripes.</span></p>
     <p><span>Winter: Nusery to class VII marron sweater for both boys and girls. Class VII to X dark maroon blazer.</span></p>
-    <h1 class="centered-heading">
-        <span>SCHOOL TIME-</span>
+    <h1 class="touch-animation">
+        SCHOOL TIME-
     </h1>
-   <h2>Monday to Friday-</h2>
+   <h2><span>Monday to Friday-</span> </h2>
    <p><span>Nusery- 9:00 to 12:00</span></p>
    <p><span>L.K.G- 9:00 to 12:25</span></p>
    <p><span>U.K.G- 9:00 to 1:25</span></p>
    <p><span>I- 9:00 to 2:00</span></p>
    <p><span>II to X- 9:00 to 2:45</span></p>
-   <h2>Saturday-</h2>
+   <h2><span>Saturday</span></h2>
    <p><span>Nursery- No CLasses</span></p>
    <p><span>L.K.G- 9:00 to 10:45</span></p>
    <p><span>U.K.G- 9:OO to 10:45</span></p>
