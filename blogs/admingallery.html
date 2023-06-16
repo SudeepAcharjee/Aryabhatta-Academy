@@ -30,27 +30,38 @@
 <!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCEFz0u9gwKgsjZeHsVL3QCj_yvkJQcC3Q",
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
-authDomain: "admin-gallery-ce26f.firebaseapp.com",
+    const firebaseConfig = {
+        apiKey: "AIzaSyBk2qp6QQ1Yrh6J_lXo75ehjF6SoALi-dc",
 
-databaseURL: "https://admin-gallery-ce26f-default-rtdb.firebaseio.com",
+authDomain: "admin-login-cbb49.firebaseapp.com",
 
-projectId: "admin-gallery-ce26f",
+projectId: "admin-login-cbb49",
 
-storageBucket: "admin-gallery-ce26f.appspot.com",
+storageBucket: "admin-login-cbb49.appspot.com",
 
-messagingSenderId: "333747816151",
+messagingSenderId: "738121297913",
 
-appId: "1:333747816151:web:52e7c625a19a4ee034d292"
+appId: "1:738121297913:web:68be53bef06ec77bc6d728"
+    };
 
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    console.log(app);
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          alert("Welcome to Gallery Admin Panel");
+            console.log(user);
+            document.body.style.display = "block";
+        } else {
+            // User is not signed in, redirect to the login page
+            window.location.href = "../index.html";
+        }
+    });
 </script>
 
 
