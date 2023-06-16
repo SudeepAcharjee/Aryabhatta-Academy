@@ -23,6 +23,9 @@
         border-radius: 20px;
         text-decoration: none;
       }
+      h3{
+        text-align: center;
+      }
     </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -35,9 +38,12 @@
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
   </head>
   <body>
+    
     <a class="top-right-button" href="./signIn.html">Login||Admin</a>
-    <a class="top-left-button" href="../superadmin.html">Home</a>
+    <a class="top-left-button" href="../superadmin.html">Log-Out</a>
+    
     <div class="form">
+      <h3>Admin Id generator Page</h3>
       <!-- Email  -->
       <div class="email">
         <label for="email">Email</label>
@@ -90,7 +96,7 @@
   
       onAuthStateChanged(auth, (user) => {
           if (user) {
-            // alert("Welcome to Super Admin");
+            alert("Welcome to AdminId Generator");
             //   console.log(user);
               
           } else {
