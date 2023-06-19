@@ -1,18 +1,19 @@
 // setting up firebase with our website
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyBumj6j7jBrkGcj20obWFMvAEVpa1RiT98",
+    piKey: "AIzaSyBumj6j7jBrkGcj20obWFMvAEVpa1RiT98",
 
-authDomain: "crud-student-87b1c.firebaseapp.com",
+  authDomain: "crud-student-87b1c.firebaseapp.com",
 
-databaseURL: "https://crud-student-87b1c-default-rtdb.firebaseio.com",
+  databaseURL: "https://crud-student-87b1c-default-rtdb.firebaseio.com",
 
-projectId: "crud-student-87b1c",
+  projectId: "crud-student-87b1c",
 
-storageBucket: "crud-student-87b1c.appspot.com",
+  storageBucket: "crud-student-87b1c.appspot.com",
 
-messagingSenderId: "465440359250",
+  messagingSenderId: "465440359250",
 
-appId: "1:465440359250:web:33e32b886c6bb69704f08b"
+  appId: "1:465440359250:web:33e32b886c6bb69704f08b"
+
   
 });
 const db = firebaseApp.firestore();
@@ -47,9 +48,9 @@ const signIn = () => {
         .then((result) => {
             // Signed in 
             // document.write("You are Signed In" )
-            window.location.assign("../onlineschool/class.html");
+            window.location.assign("../class/Classroom.html");
 
-            // console.log(result)
+            console.log(result)
         })
         .catch((error) => {
             alert("Error")
