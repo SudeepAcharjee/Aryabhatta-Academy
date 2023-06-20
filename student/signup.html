@@ -30,7 +30,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generate||Admin</title>
+    <title>Generate||Student</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
@@ -43,7 +43,7 @@
     <a class="top-left-button" href="../superadmin.html">Log-Out</a>
     
     <div class="form">
-      <h3>Admin Id generator Page</h3>
+      <h3>Student Id generator Page</h3>
       <!-- Email  -->
       <div class="email">
         <label for="email">Email</label>
@@ -75,19 +75,17 @@
       import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
   
       const firebaseConfig = {
-        apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
-  
-  authDomain: "head-admin-login.firebaseapp.com",
-  
-  databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
-  
-  projectId: "head-admin-login",
-  
-  storageBucket: "head-admin-login.appspot.com",
-  
-  messagingSenderId: "1009923970267",
-  
-  appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
+        apiKey: "AIzaSyBk2qp6QQ1Yrh6J_lXo75ehjF6SoALi-dc",
+
+authDomain: "admin-login-cbb49.firebaseapp.com",
+
+projectId: "admin-login-cbb49",
+
+storageBucket: "admin-login-cbb49.appspot.com",
+
+messagingSenderId: "738121297913",
+
+appId: "1:738121297913:web:68be53bef06ec77bc6d728"
       };
   
       const app = initializeApp(firebaseConfig);
@@ -96,7 +94,7 @@
   
       onAuthStateChanged(auth, (user) => {
           if (user) {
-            alert("Welcome to AdminId Generator");
+            alert("Welcome to StudentId Generator");
             //   console.log(user);
               
           } else {
