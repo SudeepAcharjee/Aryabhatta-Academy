@@ -46,17 +46,52 @@
     <a class="top-left-button" href="../index.html">Logout</a>
   <h1>Class Room Links</h1>
   <ul>
-    <li><a href="./class/class1.html">Class 1</a></li>
-    <li><a href="./class/class2.html">Class 2</a></li>
-    <li><a href="./class/class3.html">Class 3</a></li>
-    <li><a href="./class/class4.html">Class 4</a></li>
-    <li><a href="./class/class5.html">Class 5</a></li>
-    <li><a href="./class/class6.html">Class 6</a></li>
-    <li><a href="./class/class7.html">Class 7</a></li>
-    <li><a href="./class/class8.html">Class 8</a></li>
-    <li><a href="./class/class9.html">Class 9</a></li>
-    <li><a href="./class/class10.html">Class 10</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/PNinFPrYkTwvVSRct3toi4Zi">Class 1</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/MxJNSj7MBjZU25CwCfYuDDv4">Class 2</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/hfoMG2hUKP9yRKhLbdBGf7sv">Class 3</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/XHEbhfu932UzhgPwEyPiVHcU">Class 4</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/Q9DqeWBgrXTwVkSG5f1Ek391">Class 5</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/i4SPG1JrZY7kSZANMuELCDSH">Class 6</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/M6oGJPEsk6uTgukKqsXp7y1i">Class 7</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/ftnUFjUp7fscqLb3ozpYPwZJ">Class 8</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/ByXauTbSakjKX7aK93S7Us7b">Class 9</a></li>
+    <li><a href="https://www.playbook.com/aryabhatta/w8PpUhDBKM9LYKVwUhPVtwWP">Class 10</a></li>
   </ul>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
+
+authDomain: "head-admin-login.firebaseapp.com",
+
+databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
+
+projectId: "head-admin-login",
+
+storageBucket: "head-admin-login.appspot.com",
+
+messagingSenderId: "1009923970267",
+
+appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    console.log(app);
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          alert("Welcome to Class Control Dashboard");
+          //   console.log(user);
+            
+        } else {
+            // User is not signed in, redirect to the login page
+            window.location.href = "../index.html";
+        }
+    });
+</script>
 </body>
 </html>
  

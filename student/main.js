@@ -1,19 +1,16 @@
 // setting up firebase with our website
 const firebaseApp = firebase.initializeApp({
-    piKey: "AIzaSyBumj6j7jBrkGcj20obWFMvAEVpa1RiT98",
+    apiKey: "AIzaSyBk2qp6QQ1Yrh6J_lXo75ehjF6SoALi-dc",
 
-  authDomain: "crud-student-87b1c.firebaseapp.com",
-
-  databaseURL: "https://crud-student-87b1c-default-rtdb.firebaseio.com",
-
-  projectId: "crud-student-87b1c",
-
-  storageBucket: "crud-student-87b1c.appspot.com",
-
-  messagingSenderId: "465440359250",
-
-  appId: "1:465440359250:web:33e32b886c6bb69704f08b"
-
+    authDomain: "admin-login-cbb49.firebaseapp.com",
+  
+    projectId: "admin-login-cbb49",
+  
+    storageBucket: "admin-login-cbb49.appspot.com",
+  
+    messagingSenderId: "738121297913",
+  
+    appId: "1:738121297913:web:68be53bef06ec77bc6d728"
   
 });
 const db = firebaseApp.firestore();
@@ -48,11 +45,12 @@ const signIn = () => {
         .then((result) => {
             // Signed in 
             // document.write("You are Signed In" )
-            window.location.assign("../class/Classroom.html");
+            window.location.assign("./new.html");
 
-            console.log(result)
+            // console.log(result)
         })
         .catch((error) => {
-            alert("Error")
+            console.log(error.code);
+            console.log(error.message)
         });
 }
