@@ -12,11 +12,12 @@
     <title>Aryabhatta Academy</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="author" content="Sudeep">
-
+    <meta name="author" content="Sudeep Acharjee">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	
     <!-- Site Icons -->
-   <link rel="shortcut icon" href="./images/prettyPhoto/favicon.ico" type="image/x-icon">
-
+     <link rel="shortcut icon" href="./images/prettyPhoto/favicon.ico" type="image/x-icon">
+     <link rel="apple-touch-icon" href="./images/prettyPhoto/apple-touch-icon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
@@ -27,7 +28,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/admission.css">
+    <link rel="stylesheet" href="./css/start.css">
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
@@ -36,33 +37,50 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        /* Styling for h1 element */
+    h1.touch-animation {
+        position: relative;
+        display: flex;
+        padding: 30px 20px;
+        font-size: 24px;
+        background-color: brown; /* Change color as needed */
+        color: #ffffff; /* Change color as needed */
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        justify-content: center;
+        align-items: center;
+        }
+    </style>   
 
 </head>
 <body class="host_version"> 
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header tit-up">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Login Panel</h4>
-                </div>
-                <div class="modal-body customer-box">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs">
-                        <li><a class="active" href="" data-toggle="tab">Head || Admin</a></li>
-                        <li><a href="#Registration" data-toggle="tab">Admin</a></li>
-                        <li><a href="#Registration" data-toggle="tab">Students</a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    
-                </div>
-            </div>
-            </div>
-        </div>
-    
-    
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Login Panel</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="./firebase/login.html">Head || Admin</a></li>
+					<li><a href="./admin-teacher/signIn.html ">Admin</a></li>
+                    <li><a href="./student/signIn.html" >Students</a></li>
+				</ul>
+				<!-- Tab panes -->
+				
+			</div>
+		</div>
+	  </div>
+	</div>
+
+
+			
+
     <!-- LOADER -->
 	<div id="preloader">
 		<div class="loader-container">
@@ -72,13 +90,14 @@
 		</div>
 	</div>
 	<!-- END LOADER -->	
-
-    <!-- Start header -->
+	
+	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
-					<img src="images/logo.png" alt="" />
+					<img src="images/logo.png" alt="" 
+                        />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
@@ -87,217 +106,73 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item "><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="admission.html">Admission</a></li>
+						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Gallery </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">Images</a>
-								<a class="dropdown-item" href="blog-single.html">Admin Panel </a>
+								<a class="dropdown-item" href="blogs/signIn.html">AdminPanel </a>
+								<a class="dropdown-item" href="./blogs/gallery/admingallery.html">Photos </a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="teachers.html">Testimonials</a></li>
 						<li class="nav-item"><a class="nav-link" href="pricing.html">Examinations</a></li>
-						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						<li class="nav-item"><a class="nav-link" href=" https://wa.me/918011307741?text=Hi!%20 ">Contact</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
                     </ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<!-- End header --> 
-
-    <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2">
-            <h3 class="centered-heading">
-                <span>ADMISSION</span>
-            </h3>
-            <!-- <h2>ADMISSION AND WITHDRAWAL</h2> -->
-        </div>
-    </div>
-    <div class="section cl">
-        <div class="container">
-            <div class="row stat-wrap">
-                <div class="col-md-8 offset-md-2">
-                        <p> 1. Candidates must be introduced personally by the parents or the one who will be responsible for their regularity conduct and fees</span></p>
-                        <p> 2. Pupils are admitted on merit basis after an interview and admission test.</span></p>
-                        <p> 3. Birth Certificate is compulsory at the time of Admisssion.</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- end title -->
-        <div id="teachers" class="section wb">
-            <h1 class="touch-animation"></h1>
-                <h3 class="centered-heading">
-                    <span>FEES STRUCTURE</span>
-                </h3>
-                <!-- <h2>ADMISSION AND WITHDRAWAL</h2> -->
-            </div>
-        </div>
-        <div>
-        <h1 class="centered-heading">
-            <span></span>
-        </h1>
-        <h2>Admission fee: _______</h2>
-        <h2>Session Fee: _______</h2>
-        <h2>Monthly Fee: _______</h2>
-
-    </div>
-    <h1 class="centered-heading">
+	<!-- End header -->
+    <h1 class="touch-animation">ADMISSION</h1>
+      
+    <h3>
+        <p> 1. Candidates must be introduced personally by the parents or the one who will be responsible for their regularity conduct and fees</p>
+        <p> 2. Pupils are admitted on merit basis after an interview and admission test.</p>
+        <p> 3. Birth Certificate is compulsory at the time of Admisssion.</p> 
+    </h3>
+    
+    <h1 class="touch-animation">FEES</h1>
         
-    
+    <h3>
+        <p>Admission fee:</p>
+        <p>Session Fee:</p>
+        <p>Monthly Fee:</p>
+    </h3>
 
-    <h1 class="centered-heading">
-        <span>UNIFORMS-</span>
-    </h1>
-    <h3>Monday, Tuesday, Thursday, Friday</h3>
-        <p><span>Boys: Dark blue trousers/half pant/sky blue shirt, tie, belt, badge, black shoe, blue socks with red stripes.</span></p>   
-	    <p><span>Girls: Dark blue check shirt, sky blue shirt, tie, belt, badge, black shoes, blue socks with red stripes, white blue stripes.</span></p>
-	<h3>Wednesday, Saturday</h3>
-    <p><span>Boys: White trousers/half pant, t-shirt colour housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white scoks whith blue stripes.</span></p> 
-    <p><span>Girls: White Skirts, t-shirt colour housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white scoks whith blue stripes.</span></p>
-    <p><span>Winter: Nusery to class VII marron sweater for both boys and girls. Class VII to X dark maroon blazer.</span></p>
-    <h1 class="centered-heading">
-        <span>SCHOOL TIME-</span>
-    </h1>
-   <h2>Monday to Friday-</h2>
-   <p><span>Nusery- 9:00 to 12:00</span></p>
-   <p><span>L.K.G- 9:00 to 12:25</span></p>
-   <p><span>U.K.G- 9:00 to 1:25</span></p>
-   <p><span>I- 9:00 to 2:00</span></p>
-   <p><span>II to X- 9:00 to 2:45</span></p>
-   <h2>Saturday-</h2>
-   <p><span>Nursery- No CLasses</span></p>
-   <p><span>L.K.G- 9:00 to 10:45</span></p>
-   <p><span>U.K.G- 9:OO to 10:45</span></p>
-   <p><span>I to X- 9:00 to 12:25   </span></p>
-   <a href="./syllabus_BCA_LCB.pdf" download id="download-btn">Admission Form</a>
-
-    <!-- admission -->
-    <div id="teachers" class="section wb">
-        <h1><style>
-            /* Styling for h1 element */
-        h1.touch-animation {
-            position: relative;
-            display: flex;
-            padding: 30px 20px;
-            font-size: 24px;
-            background-color: brown; /* Change color as needed */
-            color: #ffffff; /* Change color as needed */
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-            justify-content: center;
-            align-items: center;
-            }
-        </style>   
-        </h1>
-        <h1 class="touch-animation">ADMISSION</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h3>
-                            <p> 1. Candidates must be introduced personally by the parents or the one who will be responsible for their regularity conduct and fees</p>
-                            <p> 2. Pupils are admitted on merit basis after an interview and admission test.</p>
-                            <p> 3. Birth Certificate is compulsory at the time of Admisssion.</p> 
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- Uniform -->
+ <h1 class="touch-animation">UNIFORMS</h1>
         
-        <!-- FEES -->
-        <h1 class="touch-animation">FEES</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h3>
-                            <p>Admission fee:</p>
-                            <p>Session Fee:</p>
-                            <p>Monthly Fee:</p>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <h1>
+     Monday, Tuesday, Thursday, Friday</h1>
 
-        <!-- Uniform -->
-        <h1 class="touch-animation">UNIFORMS</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h3>
-                            <h4>Monday, Tuesday, Thursday, Friday</h4>
+     <h2><span>Boys:</span></h2> <h3>Dark blue trousers/half pant/sky blue shirt, tie, belt, badge, black shoe, blue socks with red stripes.</h3>
+     <span><h2>Girls:</h2> <h3>Dark blue check shirt, sky blue shirt, tie, belt, badge, black shoes, blue socks with red stripes, white blue stripes.</span></h3>
+     <h1>Wednesday, Saturday</h1>
+     <span><h2>Boys:</h2> <h3>White trousers/half pant, t-shirt color housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white socks with blue stripes.</span> </h3>
+     <span><h2>Girls:</h2> <h3>White Skirts, t-shirt color housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white socks with blue stripes.</span></h3>
+     <span><h1>Winter</h1><h3> Nursery to class VII marron sweater for both boys and girls. Class VII to X dark maroon blazer.</span></h3>
+ 
+     <h1 class="touch-animation">School Time</h1>
+                        
+     <h1>Monday to Friday</h1>
+     <h2>Nursery - 9:00 to 12:00</h2>
+     <h2>L.K.G- 9:00 to 12:25</h2>
+     <h2>U.K.G- 9:00 to 1:25</h2>
+     <h2>I- 9:00 to 2:00</h2>
+     <h2>II to X- 9:00 to 2:45</h2>
+     <h1>Saturday</h1>
+     <h2>Nursery - No Classes</h2>
+     <h2>L.K.G- 9:00 to 10:45</h2>
+    <h2>U.K.G- 9:00 to 10:45</h2>
+    <h2>I to X - 9:00 to 12:25 </h2>
+   
 
-                            <span><h4>Boys</h4> <h3>Dark blue trousers/half pant/sky blue shirt, tie, belt, badge, black shoe, blue socks with red stripes.</h3></span>
-	                        <span><h4>Girls</h4> <h3>Dark blue check shirt, sky blue shirt, tie, belt, badge, black shoes, blue socks with red stripes, white blue stripes.</span></h3>
-	                        <h4>Wednesday, Saturday</h4>
-                            <span><h4>Boys</h4> <h3>White trousers/half pant, t-shirt color housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white socks with blue stripes.</span> </h3>
-                            <span><h4>Girls</h4> <h3>White Skirts, t-shirt color housewise(Green/Yellow/Red/Blue), belt, white campus shoes, white socks with blue stripes.</span></h3>
-                            <span><h4>Winter</h4><h3> Nursery to class VII marron sweater for both boys and girls. Class VII to X dark maroon blazer.</span></h3>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-     
 
-        <!-- uniform -->
-        <h1 class="touch-animation">UNIFORMS</h1>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h3>
-                            <h4>Monday to Friday</h4>
-                            <h3>Nursery - 9:00 to 12:00</h3>
-                            <h3>L.K.G- 9:00 to 12:25</h3>
-                            <h3>U.K.G- 9:00 to 1:25</h3>
-                            <h3>I- 9:00 to 2:00</h3>
-                            <h3>II to X- 9:00 to 2:45</h3>
-                            <h4>Saturday</h4>
-                            <h3>Nursery - No Classes</h3>
-                            <h3>L.K.G- 9:00 to 10:45</h3>
-                            <h3>U.K.G- 9:00 to 10:45</h3>
-                            <h3>I to X - 9:00 to 12:25 </h3>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    
-    <!-- <div class="parallax section dbcolor">
-        <div class="container">
-            <div class="row logos">
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div> -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-    
-    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -371,15 +246,14 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
-    <script>window.onload = function() {
-        var btn = document.getElementById('download-btn');
-        btn.onclick = function() {
-          // Here you can add code to trigger the PDF download automatically.
-          // For example, you can use the `click()` method on an invisible link element.
-          // Alternatively, you can use other techniques such as AJAX to download the PDF.
-        };
-        };
-        </script>
-
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
 </body>
 </html>
