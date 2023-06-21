@@ -23,11 +23,14 @@
         border-radius: 20px;
         text-decoration: none;
       }
+      h2{
+        text-align: center;
+      }
     </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generate||Admin</title>
+    <title>Generate||StudentID</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
@@ -35,9 +38,10 @@
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
   </head>
   <body>
-    <a class="top-right-button" href="./signIn.html">Login||Admin</a>
-    <a class="top-left-button" href="../superadmin.html">Home</a>
+    
+    <a class="top-right-button" href="../index.html">Log-Out</a>
     <div class="form">
+      <h2>Generate Id for students</h2>
       <!-- Email  -->
       <div class="email">
         <label for="email">Email</label>
@@ -65,9 +69,9 @@
 
     <script src="main.js"></script>
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-  
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
       const firebaseConfig = {
         apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
   
@@ -82,7 +86,13 @@
   messagingSenderId: "1009923970267",
   
   appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
-      };
+      };     
+
+
+
+
+
+
   
       const app = initializeApp(firebaseConfig);
       const auth = getAuth();
@@ -90,14 +100,15 @@
   
       onAuthStateChanged(auth, (user) => {
           if (user) {
-            // alert("Welcome to Super Admin");
-            //   console.log(user);
-              
+           
+              console.log(user);
+              document.body.style.display = "block";
           } else {
               // User is not signed in, redirect to the login page
-              window.location.href = "../login.html";
+              window.location.href = "../index.html";
           }
       });
+      alert("Student Id Generator page")
   </script>
   </body>
 </html>

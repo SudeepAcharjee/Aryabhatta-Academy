@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online AA||Head Admin</title>
+    <title>Teachers Dashboard</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <style>
         .top-right-button {
@@ -28,31 +28,84 @@
           border-radius: 20px;
           text-decoration: none;
         }
+        h1, h2{
+            text-align: center;
+        }
+        body {
+      background-color: #0077be; /* Ocean blue background color */
+    }
+    
+    h1 {
+      color: #fff; /* White heading text color */
+      text-align: center;
+      padding: 20px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    a {
+      color: #fff; /* White link text color */
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background color */
+    }
+
+    .top-left-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #fc8d24;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
       </style>
 </head>
 <body>
-    <h1>This page is under progress</h1>
-    <a class="top-right-button" href="../student/signup.html">Generate Std ID</a>
-    <a class="top-left-button" href="../index.html">Home</a>
+  <h1>Welcome to Teachers Dashboard</h1>
+  <a class="top-left-button" href="../index.html">Logout</a>
+  <ul>
+    
+    <li><a href="../student/signup.html">Generate Id for students</a></li>
+    <li><a href="../class/Classroom.html">Class Room </a></li>
+    <!-- <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+    <>li<a href="#">Link 6</a></li>
+    <li><a href="#">Link 7</a></li>
+    <li><a href="#">Link 8</a></li>
+    <li><a href="#">Link 9</a></li>
+    <li><a href="#">Link 10</a></li> -->
+  </ul>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
         import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
     
         const firebaseConfig = {
-          apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
-    
-    authDomain: "head-admin-login.firebaseapp.com",
-    
-    databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
-    
-    projectId: "head-admin-login",
-    
-    storageBucket: "head-admin-login.appspot.com",
-    
-    messagingSenderId: "1009923970267",
-    
-    appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
-        };
+          apiKey: "AIzaSyBk2qp6QQ1Yrh6J_lXo75ehjF6SoALi-dc",
+
+authDomain: "admin-login-cbb49.firebaseapp.com",
+
+projectId: "admin-login-cbb49",
+
+storageBucket: "admin-login-cbb49.appspot.com",
+
+messagingSenderId: "738121297913",
+
+appId: "1:738121297913:web:68be53bef06ec77bc6d728"
+
+};
+
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
@@ -60,7 +113,7 @@
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
-          
+          alert("Welcome to the Teachers Panel")
             document.body.style.display = "block";
         } else {
             // User is not signed in, redirect to the login page

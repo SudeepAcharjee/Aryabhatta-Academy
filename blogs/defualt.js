@@ -76,3 +76,23 @@ function delete_post(key){
     getdata();
 
 }
+// Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCEFz0u9gwKgsjZeHsVL3QCj_yvkJQcC3Q",
+
+authDomain: "admin-gallery-ce26f.firebaseapp.com",
+
+databaseURL: "https://admin-gallery-ce26f-default-rtdb.firebaseio.com",
+
+projectId: "admin-gallery-ce26f",
+
+storageBucket: "admin-gallery-ce26f.appspot.com",
+
+messagingSenderId: "333747816151",
+
+appId: "1:333747816151:web:52e7c625a19a4ee034d292"
+
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();

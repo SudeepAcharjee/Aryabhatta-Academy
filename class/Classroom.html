@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .top-left-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    body {
+      background-color: #0077be; /* Ocean blue background color */
+    }
+    
+    h1 {
+      color: #fff; /* White heading text color */
+      text-align: center;
+      padding: 20px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    a {
+      color: #fff; /* White link text color */
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background color */
+    }
+  </style>
+</head>
+<body>
+  <title>ClassRoom </title>
+    <a class="top-left-button" href="../index.html">Logout</a>
+  <h1>Class Room Links</h1>
+  <ul>
+    <li><a href="https://www.playbook.com/s/aryabhatta/ga8N4Pw7fz7nZdMxZYEr8QCo">Class 1</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/65f9NMhcmbbdHoUuTpKwJiYG">Class 2</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/xbbgjMHNoJtp9rdrvaZpfxyL">Class 3</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/sMVCm5eP5fn64T3iJf13FWZg">Class 4</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/4FR6RZuov8xf3KXshmZAdfc3">Class 5</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/fsm5r1ro9m8medXGL8RzNtqu">Class 6</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/cbJKjaUV9Y9tor5VYqjh2SP2">Class 7</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/L7oYyTKQzws31Nih4SYopL6c">Class 8</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/Wjfz8i4QUNYA2nwzmMCqMyTp">Class 9</a></li>
+    <li><a href="https://www.playbook.com/s/aryabhatta/RrQW4pxB7vqp8zkG56Jv9fnJ">Class 10</a></li>
+  </ul>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBk2qp6QQ1Yrh6J_lXo75ehjF6SoALi-dc",
+
+authDomain: "admin-login-cbb49.firebaseapp.com",
+
+projectId: "admin-login-cbb49",
+
+storageBucket: "admin-login-cbb49.appspot.com",
+
+messagingSenderId: "738121297913",
+
+appId: "1:738121297913:web:68be53bef06ec77bc6d728"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+console.log(app);
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+      alert("Welcome to the ClassRoom")
+        document.body.style.display = "block";
+    } else {
+        // User is not signed in, redirect to the login page
+        window.location.href = "../index.html";
+    }
+});
+</script>
+</body>
+</html>
+ 

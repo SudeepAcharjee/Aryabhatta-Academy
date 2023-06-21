@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #0077be; /* Ocean blue background color */
+    }
+    
+    h1 {
+      color: #fff; /* White heading text color */
+      text-align: center;
+      padding: 20px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+    
+    a {
+      color: #fff; /* White link text color */
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background color */
+    }
+
+    .top-left-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #0077be;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+  </style>
+</head>
+<body>
+    <title>Dashboard Panel</title>
+    <a class="top-left-button" href="../index.html">Logout</a>
+  <h1>Welcome to Admin Dashboard</h1>
+  <ul>
+    <li><a href="../admin-teacher/signup.html">Generate Id for Teachers</a></li>
+    <li><a href="../admin-teacher/atudentsid.html">Generate Id for students</a></li>
+    <li><a href="./classcontrol.html">Class Room Control</a></li>
+    <!-- <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+    <>li<a href="#">Link 6</a></li>
+    <li><a href="#">Link 7</a></li>
+    <li><a href="#">Link 8</a></li>
+    <li><a href="#">Link 9</a></li>
+    <li><a href="#">Link 10</a></li> -->
+  </ul>
+  <h1>Database Control</h1>
+  <ul>
+    <li><a href="https://console.firebase.google.com/u/0/project/admin-login-cbb49/authentication/users">Database for Teachers</a></li>
+    <li><a href="https://console.firebase.google.com/u/0/project/crud-student-87b1c/authentication/users"> Database for students</a></li>
+    <li><a href="https://console.firebase.google.com/u/0/project/admin-gallery-ce26f/storage/admin-gallery-ce26f.appspot.com/files/~2Fimages">Gallery Database</a></li>
+    <!-- <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+    <li><a href="#">Link 6</a></li>
+    <li><a href="#">Link 7</a></li>
+    <li><a href="#">Link 8</a></li>
+    <li><a href="#">Link 9</a></li>
+    <li><a href="#">Link 10</a></li> -->
+  </ul>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDX0Doecu7K5y8qv-f9KOhuZNPb01wNJm4",
+
+authDomain: "head-admin-login.firebaseapp.com",
+
+databaseURL: "https://head-admin-login-default-rtdb.firebaseio.com",
+
+projectId: "head-admin-login",
+
+storageBucket: "head-admin-login.appspot.com",
+
+messagingSenderId: "1009923970267",
+
+appId: "1:1009923970267:web:dac09972fde1b5fb80a8fe"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    console.log(app);
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          alert("Welcome to Dashboard");
+          //   console.log(user);
+            
+        } else {
+            // User is not signed in, redirect to the login page
+            window.location.href = "../index.html";
+        }
+    });
+</script>
+</body>
+</html>
