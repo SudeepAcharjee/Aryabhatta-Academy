@@ -84,4 +84,6 @@ if(mail($address, $e_subject, $msg, $headers)) {
 	echo "</fieldset>";
 
 }
-else{}
+else{ 
+	echo""
+}
