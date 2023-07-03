@@ -85,5 +85,5 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 }
 else{ 
-	echo"Hi move";
+	echo"Hi move vf";
 }
